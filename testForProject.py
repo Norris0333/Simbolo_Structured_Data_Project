@@ -29,8 +29,8 @@ if uploaded_file is not None:
     st.dataframe(df)
 
     # Specify the x, y, and z columns for the bar chart
-    x_column = st.selectbox('State_and_Region', df.columns)
-    y_column = st.selectbox('Pred_Poverty_HC', df.columns)
+    x_column = st.selectbox('First_Compare', df.columns)
+    y_column = st.selectbox('Second_Compare', df.columns)
 #     z_column = st.selectbox(, df.columns)
 
     # Create a bar chart using the specified columns

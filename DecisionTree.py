@@ -14,8 +14,13 @@ if response.status_code == 200:
     with open('train_model.joblib', 'wb') as model_file:
         model_file.write(model_content)
 
-    # Load the trained model using joblib
+    # # Load the trained model using joblib
+    # model = joblib.load('train_model.joblib')
+    try:
     model = joblib.load('train_model.joblib')
+    except Exception as e:
+    st.error(f'Error loading the model: {str(e)}')
+
 else:
     st.error('Failed to load the model. Please check the URL.')
 

@@ -11,7 +11,8 @@ response = requests.get("https://github.com/Norris0333/Simbolo_Structured_Data_P
 if response.status_code == 200:
     model_content = response.content
     # Load the trained model using pickle
-    model = pickle.loads(model_content)
+    with open('trained_model.pkl', 'rb') as model_file:
+    model = pickle.load(model_file)
 else:
     st.error('Failed to load the model. Please check the URL.')
 

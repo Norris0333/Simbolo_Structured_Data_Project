@@ -6,7 +6,7 @@ import requests
 
 st.title('ML Prediction App')
 uploaded_file = st.file_uploader('Upload a CSV file', type=['csv'])
-response = requests.get("https://github.com/Norris0333/Simbolo_Structured_Data_Project/raw/main/train_model.pkl")
+response = requests.get("https://github.com/Norris0333/Simbolo_Structured_Data_Project/blob/bd2f78eacb2bb6ed07659b49e91e4d61d6a6c5ec/train_model.pkl")
 
 if response.status_code == 200:
     model_content = response.content
